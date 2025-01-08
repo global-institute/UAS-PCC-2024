@@ -1,5 +1,5 @@
 # Selamat Datang Di :
-## Project UAS Pengantar Cloud Computing 2024
+## Project UAS Pengantar Cloud Computing 2025
 
 **Note:** 
 *Bacalah instruksi dengan seksama sebelum mengerjakan :*
@@ -17,13 +17,13 @@ Anda diminta untuk menjalankan suatu **halaman website** (boleh blog, portofolio
 - Deskiripsi singkat tentang pengalaman yang didapatkan dalam materi ini.
 
 ### Langkah mengerjakan :
-- Buat repository dengan nama **"UAS-PCC-Nama_MHS-2024"**, misal **UAS-PCC-Ilham-2024**
+- Buat repository dengan nama **"UAS-PCC-Nama_MHS-2025"**, misal **UAS-PCC-Ilham-2025**
 - Clone repository ke local pc anda
   - `$ git clone [url-git-anda.git]`
 - Buat branch baru dengan nama **"development"**
 - Lakukan modifikasi halaman website yang anda persiapkan di branch **development**
 - Jika perubahan dirasa sudah sesuai dengan instruksi diatas, lakukan *merge* ke branch **main**
-- Nama docker image ketika build sama dengan nama repository **UAS-PCC-Nama_MHS-2024**
+- Nama docker image ketika build sama dengan nama repository **UAS-PCC-Nama_MHS-2025**
 
 ### Tips :
 - Setting repository github, dan tambahkan secret yang berisi _dockerhub username_ dan _dockerhub Access Token_
@@ -31,7 +31,7 @@ Anda diminta untuk menjalankan suatu **halaman website** (boleh blog, portofolio
 - File github action berlokasi di folder **.github/workflows/actions-workflow.yml**
 - Ubah dan sesuaikan _tag_, _repository_, _secrets_ pada file **actions-workflow.yml** sesuai repo masing-masing
   - `docker build -t dockerhub_username/image_name:latest -f Dockerfile .`
-  - `docker login -u ${{secrets.[dockerhub_username]}} -p ${{secrets.[dockerhub_AccessToken]}} && docker push dockerhub_username/image_name:latest`
+  - `docker login -u ${{secrets.dockerhub_username}} -p ${{secrets.dockerhub_AccessToken}} && docker push dockerhub_username/image_name:latest`
 - Jika semua persiapan sudah selesai, silahkan push ke repository masing-masing
   - `git add .`
   - `git commit -m "commit message"`
