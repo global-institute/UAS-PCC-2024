@@ -32,6 +32,7 @@ Anda diminta untuk menjalankan suatu **halaman website** (boleh blog, portofolio
 - Ubah dan sesuaikan _tag_, _repository_, _secrets_ pada file **actions-workflow.yml** sesuai repo masing-masing
   - `docker build -t dockerhub_username/image_name:latest -f Dockerfile .`
   - `docker login -u ${{secrets.dockerhub_username}} -p ${{secrets.dockerhub_AccessToken}} && docker push dockerhub_username/image_name:latest`
+  - lihat referensi dibawah untuk membuat secret dan menggunakannya
 - Jika semua persiapan sudah selesai, silahkan push ke repository masing-masing
   - `git add .`
   - `git commit -m "commit message"`
@@ -45,3 +46,7 @@ Anda diminta untuk menjalankan suatu **halaman website** (boleh blog, portofolio
 
 ### Bagaimana Penilaiannya :
 Buat dokumentasi dan submit Pada Assignment Final Test (UAS) di LMS.
+
+### Refensi :
+- Bagaimana membuat access token pada dockerhub : https://docs.docker.com/security/for-developers/access-tokens/
+- Bagaimana membuat environment secret pada github action : https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository
